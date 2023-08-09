@@ -1,2 +1,7 @@
 .THIS {
 }
+
+.THIS .slds-notify {
+    /* Estilização para a área de mensagens */
+    max-width: fit-content;
+}
