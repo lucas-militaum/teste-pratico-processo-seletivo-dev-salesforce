@@ -8,12 +8,12 @@
 
 ## Tarefas
 
-[x] Desenvolvimento de Lightning Component
+- [x] Desenvolvimento de Lightning Component
 
-[x] Desenvolvimento da Trigger para o Objeto Account
+- [x] Desenvolvimento da Trigger para o Objeto Account
 
-[x] Desenvolvimento de classe implementando interface Batchable para atualização de contas inativas
+- [x] Desenvolvimento de classe implementando interface Batchable para atualização de contas inativas
 
-[x] Desenvolvimento de classe implementando interface Schedulable para agendamente de classe batch
+- [x] Desenvolvimento de classe implementando interface Schedulable para agendamente de classe batch
 
-[x] Desenvolvimento das classes de teste
+- [x] Desenvolvimento das classes de teste
