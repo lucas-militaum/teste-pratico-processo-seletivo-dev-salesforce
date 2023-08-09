@@ -22,7 +22,7 @@
 
 ### Features
 
-- [Componente Lightning](https://github.com/lucas-militaum/teste-pratico-processo-seletivo-dev-salesforce/tree/master/force-app/main/default/aura/editAccountLightningComponent)
+- [Componente Lightning](https://github.com/lucas-militaum/teste-pratico-processo-seletivo-dev-salesforce/blob/master/force-app/main/default/aura/editAccountLightningComponent/editAccountLightningComponent.cmp)
 
 - [Trigger Account](https://github.com/lucas-militaum/teste-pratico-processo-seletivo-dev-salesforce/blob/master/force-app/main/default/classes/AccountTriggerHandler.cls)
 
