@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <lightning:card title="Editar Conta" iconName="standard:account">
+        <div class="slds-p-around_medium">
+            <lightning:recordEditForm aura:id="editForm" recordId="{!v.recordId}" objectApiName="Account"
+                onsuccess="{!c.handleSaveSuccess}">
+                <lightning:messages />
+                <lightning:inputField fieldName="Name" />
+                <lightning:inputField fieldName="AccountNumber" />
+                <lightning:inputField fieldName="Type" />
+                <div class="slds-m-top_medium">
+                    <lightning:button label="Save" variant="brand" type="submit" />
+                </div>
+            </lightning:recordEditForm>
+        </div>
+    </lightning:card>
+</aura:component>
