@@ -1,18 +1,19 @@
-# Salesforce DX Project: Next Steps
+# Teste técnico realizado para processo seletivo
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## Ferramentas Utilizadas
 
-## How Do You Plan to Deploy Your Changes?
+- [Framework Trigger handler](https://github.com/kevinohara80/sfdc-trigger-framework)
+- Vscode
+- Github
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Tarefas
 
-## Configure Your Salesforce DX Project
+[x] Desenvolvimento de Lightning Component
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+[x] Desenvolvimento da Trigger para o Objeto Account
 
-## Read All About It
+[x] Desenvolvimento de classe implementando interface Batchable para atualização de contas inativas
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+[x] Desenvolvimento de classe implementando interface Schedulable para agendamente de classe batch
+
+[x] Desenvolvimento das classes de teste
