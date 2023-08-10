@@ -4,9 +4,9 @@
             <lightning:recordEditForm aura:id="editForm" recordId="{!v.recordId}" objectApiName="Account"
                 onsuccess="{!c.handleSaveSuccess}">
                 <lightning:messages />
-                <lightning:inputField fieldName="Name" />
-                <lightning:inputField fieldName="AccountNumber" />
-                <lightning:inputField fieldName="Type" />
+                <lightning:inputField fieldName="Name" required="true" />
+                <lightning:inputField fieldName="AccountNumber" required="true" />
+                <lightning:inputField fieldName="Type" required="true" />
                 <div class="slds-m-top_medium">
                     <lightning:button label="Save" variant="brand" type="submit" />
                 </div>

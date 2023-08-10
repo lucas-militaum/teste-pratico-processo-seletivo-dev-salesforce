@@ -1,13 +1,18 @@
 @isTest
 public with sharing class AccountTriggerTest {
 
-    @isTest
-    private static void updateAccountCPFSuccess() {
+    @TestSetup
+    static void makeData(){
         Account acc = new Account(
             Name = 'Conta Teste'
         );
         
         insert acc;
+    }
+
+    @isTest
+    private static void updateAccountCPFSuccess() {
+        Account acc = [SELECT Id FROM Account LIMIT 1];
 
         String cpf = '59151349043';
 
@@ -21,11 +26,7 @@ public with sharing class AccountTriggerTest {
 
     @isTest
     private static void updateAccountCNPJSuccess() {
-        Account acc = new Account(
-            Name = 'Conta Teste'
-        );
-        
-        insert acc;
+        Account acc = [SELECT Id FROM Account LIMIT 1];
 
         String cnpj = '79274174000100';
 
@@ -39,11 +40,7 @@ public with sharing class AccountTriggerTest {
 
     @isTest
     private static void updateAccountCPFFailure() {
-        Account acc = new Account(
-            Name = 'Conta Teste'
-        );
-        
-        insert acc;
+        Account acc = [SELECT Id FROM Account LIMIT 1];
 
         String cpf = '332211';
 
@@ -58,11 +55,7 @@ public with sharing class AccountTriggerTest {
 
     @isTest
     private static void updateAccountCNPJFailure() {
-        Account acc = new Account(
-            Name = 'Conta Teste'
-        );
-        
-        insert acc;
+        Account acc = [SELECT Id FROM Account LIMIT 1];
 
         String cnpj = '112233';
 
@@ -86,7 +79,7 @@ public with sharing class AccountTriggerTest {
 
         insert novaConta;
 
-        List<Opportunity> partnerOppsCreated = [SELECT Id FROM Opportunity WHERE Name LIKE '% - opp Parceiro'];
+        List<Opportunity> partnerOppsCreated = [SELECT Id FROM Opportunity WHERE Name LIKE '% - opp Parceiro' AND Accountid =: novaConta.id];
 
         System.assert(partnerOppsCreated.size() == 1);
     }
@@ -122,7 +115,7 @@ public with sharing class AccountTriggerTest {
 
         insert novasContas;
 
-        List<Opportunity> partnerOppsCreated = [SELECT Id FROM Opportunity WHERE Name LIKE '% - opp Parceiro'];
+        List<Opportunity> partnerOppsCreated = [SELECT Id FROM Opportunity WHERE Name LIKE '% - opp Parceiro' AND Accountid IN: novasContas];
 
         System.assert(partnerOppsCreated.size() == 100);
     }
@@ -143,7 +136,7 @@ public with sharing class AccountTriggerTest {
 
         insert novasContas;
 
-        List<Task> finalConsumerTasksCreated = [SELECT Id FROM Task WHERE Subject = 'Consumidor Final'];
+        List<Task> finalConsumerTasksCreated = [SELECT Id FROM Task WHERE Subject = 'Consumidor Final' AND WhatId IN: novasContas];
 
         System.debug('TAREFAS');
         System.debug(finalConsumerTasksCreated);
